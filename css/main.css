@@ -211,6 +211,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 30px;
 }
 
+#about .left .icon {
+  font-size: 200px; /* Adjust the size as needed */
+  color: #4CAF50; /* Optional: Change the icon color */
+  margin-right: 10px; /* Space between icon and text */
+}
+
 .research_interest {
   margin-top: 20px; /* Add margin to create space between the title and the list */
 }
@@ -1096,6 +1102,34 @@ footer .copyright p a:hover {
   }
 }
 
+.img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 576px) {
+  #intro .img {
+      /* Adjust styles for small screens (e.g., smartphones) */
+      max-width: 100%; /* Ensures the image takes full width of the screen */
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  #intro .img {
+      /* Adjust styles for medium-sized screens (e.g., tablets) */
+      max-width: 90%; /* Ensures the image does not take full width of the screen */
+  }
+}
+
+@media screen and (min-width: 993px) {
+  #intro .img {
+      /* Adjust styles for larger screens (e.g., desktops) */
+      max-width: 80%; /* Limits the width of the image for better readability */
+  }
+}
+
+
 @media (min-width: 992px) {
   h1 {
     font-size: 4rem;
@@ -1319,6 +1353,8 @@ footer .copyright p a:hover {
   }
 }
 
+
+
 @media (min-width: 768px) {
   #education .co .part-one {
     background-color: green;
@@ -1387,7 +1423,6 @@ footer .copyright p a:hover {
   }
 }
 
-
 /* Media Queries */
 @media (min-width: 768px) {
   #education .co {
@@ -1395,19 +1430,17 @@ footer .copyright p a:hover {
   }
 
   #education .co .part-one {
-    flex: 0 0 20%; /* Adjust to 20% for medium screens and above */
+    flex: 0 0 30%; /* Adjust to 20% for medium screens and above */
   }
 
   #education .co .part-two {
-    flex: 0 0 80%; /* Adjust to 80% for medium screens and above */
+    flex: 0 0 70%; /* Adjust to 80% for medium screens and above */
   }
 }
 
-@media (min-width: 1200px) {
-  #education .container .h1.title {
-    font-size: 3rem;
-  }
 
+@media (min-width: 1200px) {
+  
   #education .co {
     margin-top: 30px;
   }
