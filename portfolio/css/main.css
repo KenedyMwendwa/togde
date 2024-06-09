@@ -510,13 +510,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #education {
   background-color: #222222;
-  padding: 50px 0px;
+  padding: 50px 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Lato', sans-serif;
 }
+
 #education .container .h1.title {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -526,6 +527,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #education .co {
   display: flex;
+  flex-direction: column; /* Change to column for small screens */
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -540,17 +542,17 @@ h1, h2, h3, h4, h5, h6 {
   background-color: green;
   color: white;
   padding: 20px;
-  flex: 0 0 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
+  flex: 0 0 auto; /* Adjust to auto for small screens */
 }
 
 #education .co .part-two {
   padding: 20px;
-  flex: 0 0 80%;
+  flex: 1 0 auto; /* Adjust to auto for small screens */
   box-sizing: border-box;
 }
 
@@ -568,10 +570,10 @@ h1, h2, h3, h4, h5, h6 {
 #education h2, p {
   margin: 0 0 10px 0;
 }
-#education .green {
-color: #68d372;
-}
 
+#education .green {
+  color: #68d372;
+}
 
 
 #publications {
@@ -816,8 +818,67 @@ color: #68d372;
   padding-bottom: 5px; /* Ensure space between text and underline */
 }
 
+/* Center the container */
+#Certifications .container {
+  text-align: center;
+}
 
+/* Style for the section title */
+#Certifications h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 
+#Certifications h1 .green {
+  color: #68d372; /* Green color for highlighted text */
+}
+
+/* List styles */
+#Certifications .Certification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Align text to the left for better readability */
+  margin: 0 auto; /* Center the list */
+  display: inline-block; /* Center the list within the container */
+}
+
+/* List item styles */
+#Certifications .Certification-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px; /* Adjust padding for green dot */
+  border-bottom: 1px solid #000000; /* Add black underline */
+}
+
+/* Green dot before each list item */
+#Certifications .Certification-list li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #68d372; /* Green dot */
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Certification item styles */
+#Certifications .certification-item {
+  font-size: 1.2rem;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 5px; /* Ensure space between text and underline */
+}
+
+/* Additional padding for the last certification item */
+#Certifications .Certification-list li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 70px;
+}
 
 
 
@@ -1255,6 +1316,109 @@ footer .copyright p a:hover {
   #publications-conferences .conference-item {
     font-size: 1.2rem;
     padding-bottom: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  #education .co .part-one {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  #education {
+    background-color: #222222;
+    padding: 50px 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+  }
+
+  #education .container .h1.title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: whitesmoke;
+  }
+
+  #education .co {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1300px;
+    width: 90%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+  #education .co .part-two {
+    padding: 20px;
+    flex: 0 0 80%;
+    box-sizing: border-box;
+  }
+
+  #education .co .part-two p:first-of-type {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  #education .co .part-two p:nth-of-type(2) {
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+
+  #education h2, p {
+    margin: 0 0 10px 0;
+  }
+
+  #education .green {
+    color: #68d372;
+  }
+}
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+  #education .co {
+    flex-direction: row; /* Change to row for medium screens and above */
+  }
+
+  #education .co .part-one {
+    flex: 0 0 20%; /* Adjust to 20% for medium screens and above */
+  }
+
+  #education .co .part-two {
+    flex: 0 0 80%; /* Adjust to 80% for medium screens and above */
+  }
+}
+
+@media (min-width: 1200px) {
+  #education .container .h1.title {
+    font-size: 3rem;
+  }
+
+  #education .co {
+    margin-top: 30px;
+  }
+
+  #education .co .part-one h2 {
+    font-size: 1.5rem;
+  }
+
+  #education .co .part-two p:first-of-type,
+  #education .co .part-two p:nth-of-type(2) {
+    font-size: 1.8em;
   }
 }
 
