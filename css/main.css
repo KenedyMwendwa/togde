@@ -539,7 +539,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-width: 1300px;
-  width: 90%;
+  width: 100%;
   box-sizing: border-box;
   margin-top: 20px;
 }
@@ -1354,7 +1354,6 @@ footer .copyright p a:hover {
 }
 
 
-
 @media (min-width: 768px) {
   #education .co .part-one {
     background-color: green;
@@ -1392,7 +1391,7 @@ footer .copyright p a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 1300px;
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
     margin-top: 20px;
   }
@@ -1454,6 +1453,7 @@ footer .copyright p a:hover {
     font-size: 1.8em;
   }
 }
+
 
 
 
